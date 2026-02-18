@@ -3308,6 +3308,12 @@
 		(uuid "8d37b213-b098-4364-a60a-6282b7e995e3")
 	)
 	(junction
+		(at 191.77 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be4b1b24-3311-4f7f-9c30-294e5ea0b8ca")
+	)
+	(junction
 		(at 142.24 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3426,6 +3432,16 @@
 			(type default)
 		)
 		(uuid "15314825-1638-4971-a985-70dcc765b3dc")
+	)
+	(wire
+		(pts
+			(xy 193.04 109.22) (xy 189.23 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16658ff5-0095-47a9-a697-b23847c23aea")
 	)
 	(wire
 		(pts
@@ -3626,6 +3642,16 @@
 			(type solid)
 		)
 		(uuid "4e60e1af-19bd-45a0-b418-b7030b594dde")
+	)
+	(wire
+		(pts
+			(xy 191.77 105.41) (xy 194.31 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50c14b9b-fc25-43ae-ac95-7a7f60eaf607")
 	)
 	(wire
 		(pts
@@ -3949,6 +3975,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 105.41) (xy 191.77 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb9a389-8daf-4b6a-ab39-81323bda6e63")
+	)
+	(wire
+		(pts
 			(xy 106.68 66.04) (xy 116.84 66.04)
 		)
 		(stroke
@@ -4059,7 +4095,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 106.68) (xy 191.77 104.14)
+			(xy 191.77 106.68) (xy 191.77 105.41)
 		)
 		(stroke
 			(width 0)
@@ -4811,6 +4847,28 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 194.31 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "65995317-0894-4b9d-a339-897c6a25e24f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 201.2608 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SW"
 		(shape input)
 		(at 105.41 86.36 180)
@@ -4879,7 +4937,7 @@
 	)
 	(global_label "R2"
 		(shape input)
-		(at 189.23 109.22 0)
+		(at 193.04 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4889,7 +4947,7 @@
 		)
 		(uuid "79964b6d-149a-4a95-b485-5485ab1e6ead")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.7898 109.22 0)
+			(at 198.5998 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
