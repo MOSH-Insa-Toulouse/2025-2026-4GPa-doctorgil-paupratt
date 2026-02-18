@@ -4436,6 +4436,17 @@
 			(uuid "b057809d-3e31-45c7-9f72-2668dc32aee7")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/NITRO5/Documents/GitHub/2025-2026-4GPa-doctorgil-paupratt/Libraries/MODÈLES 3D/Pins/pin-header-female-2-54mm-different-pin-numbers-1.snapshot.4/2-Pin Header - Female - 2.54mm.step"
+			(offset
+				(xyz -1.2 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
 		(layer "F.Cu")
