@@ -136,30 +136,30 @@
 	(net 13 "VCC")
 	(net 14 "/~{RESET}")
 	(net 15 "/D12")
-	(net 16 "/D9")
-	(net 17 "ADC")
-	(net 18 "Net-(Graphite_sensor1--)")
-	(net 19 "TXD")
-	(net 20 "RXD")
-	(net 21 "unconnected-(J2-Pin_1-Pad1)")
-	(net 22 "unconnected-(J2-Pin_2-Pad2)")
-	(net 23 "SCK RE")
-	(net 24 "SW")
-	(net 25 "DT")
-	(net 26 "/*5")
-	(net 27 "SCL")
-	(net 28 "SDA")
-	(net 29 "D11 PWM{slash}MOSI")
-	(net 30 "D13 PWM{slash}SCK")
-	(net 31 "D10 PWM{slash}MOSI")
-	(net 32 "R2")
-	(net 33 "D10 PWM{slash}SS")
-	(net 34 "Net-(AOP1-OUT)")
-	(net 35 "Net-(AOP1--IN)")
-	(net 36 "unconnected-(AOP1-NC-Pad8)")
-	(net 37 "unconnected-(AOP1-NC_2-Pad1)")
-	(net 38 "unconnected-(AOP1-EXTCLOCKINPUT-Pad5)")
-	(net 39 "Net-(AOP1-+IN)")
+	(net 16 "ADC")
+	(net 17 "Net-(Graphite_sensor1--)")
+	(net 18 "TXD")
+	(net 19 "RXD")
+	(net 20 "unconnected-(J2-Pin_1-Pad1)")
+	(net 21 "unconnected-(J2-Pin_2-Pad2)")
+	(net 22 "SCK RE")
+	(net 23 "SW")
+	(net 24 "DT")
+	(net 25 "/*5")
+	(net 26 "SCL")
+	(net 27 "SDA")
+	(net 28 "D11 PWM{slash}MOSI")
+	(net 29 "D13 PWM{slash}SCK")
+	(net 30 "D10 PWM{slash}MOSI")
+	(net 31 "R2")
+	(net 32 "D10 PWM{slash}SS")
+	(net 33 "Net-(AOP1-OUT)")
+	(net 34 "Net-(AOP1--IN)")
+	(net 35 "unconnected-(AOP1-NC-Pad8)")
+	(net 36 "unconnected-(AOP1-NC_2-Pad1)")
+	(net 37 "unconnected-(AOP1-EXTCLOCKINPUT-Pad5)")
+	(net 38 "Net-(AOP1-+IN)")
+	(net 39 "D9 PWM")
 	(footprint "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical"
 		(locked yes)
 		(layer "F.Cu")
@@ -711,7 +711,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "ADC")
+			(net 16 "ADC")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "d01848fa-8955-4a7a-b543-6d87b8c1512d")
@@ -755,7 +755,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 28 "SDA")
+			(net 27 "SDA")
 			(pinfunction "Pin_5")
 			(pintype "passive")
 			(uuid "ea5b9dbd-eadf-4ddf-82e3-5d604252f800")
@@ -766,7 +766,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 27 "SCL")
+			(net 26 "SCL")
 			(pinfunction "Pin_6")
 			(pintype "passive")
 			(uuid "d77e5dcd-ccdf-49c3-9f69-d935575c8538")
@@ -1012,7 +1012,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 21 "unconnected-(J2-Pin_1-Pad1)")
+			(net 20 "unconnected-(J2-Pin_1-Pad1)")
 			(pinfunction "Pin_1")
 			(pintype "passive+no_connect")
 			(uuid "29fcb139-bd4d-46c2-a1ef-edb27596c197")
@@ -1023,7 +1023,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 22 "unconnected-(J2-Pin_2-Pad2)")
+			(net 21 "unconnected-(J2-Pin_2-Pad2)")
 			(pinfunction "Pin_2")
 			(pintype "passive+no_connect")
 			(uuid "8a2a0c3c-afd3-4fc0-8335-c8cdebe19069")
@@ -1056,7 +1056,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 30 "D13 PWM{slash}SCK")
+			(net 29 "D13 PWM{slash}SCK")
 			(pinfunction "Pin_5")
 			(pintype "passive")
 			(uuid "52bfa648-49f3-43c4-a92f-09a020bcf6f1")
@@ -1078,7 +1078,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 29 "D11 PWM{slash}MOSI")
+			(net 28 "D11 PWM{slash}MOSI")
 			(pinfunction "Pin_7")
 			(pintype "passive")
 			(uuid "0b3cab23-1b3b-4478-a15c-9a9089de498e")
@@ -1089,7 +1089,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 31 "D10 PWM{slash}MOSI")
+			(net 30 "D10 PWM{slash}MOSI")
 			(pinfunction "Pin_8")
 			(pintype "passive")
 			(uuid "60ab1308-c3cf-4eb7-89a2-9b517bef58fc")
@@ -1100,7 +1100,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "/D9")
+			(net 39 "D9 PWM")
 			(pinfunction "Pin_9")
 			(pintype "passive")
 			(uuid "9f147e98-0360-4eb5-878f-7136c27a65b1")
@@ -1111,7 +1111,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 19 "TXD")
+			(net 18 "TXD")
 			(pinfunction "Pin_10")
 			(pintype "passive")
 			(uuid "960a3d90-c5cc-4e56-80ed-d10965c73eee")
@@ -1357,7 +1357,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 20 "RXD")
+			(net 19 "RXD")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "96619a64-4787-40fb-8667-cc0dfdc60ecc")
@@ -1379,7 +1379,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 26 "/*5")
+			(net 25 "/*5")
 			(pinfunction "Pin_3")
 			(pintype "passive")
 			(uuid "f12e60f2-da16-4904-b4d4-cf95f3eabc57")
@@ -1390,7 +1390,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 25 "DT")
+			(net 24 "DT")
 			(pinfunction "Pin_4")
 			(pintype "passive")
 			(uuid "ebc36dc4-a03d-4f33-8b8b-cf0052b39d61")
@@ -1401,7 +1401,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 24 "SW")
+			(net 23 "SW")
 			(pinfunction "Pin_5")
 			(pintype "passive")
 			(uuid "c166337a-a32b-4b24-8138-2d06c6a9a023")
@@ -1412,7 +1412,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 23 "SCK RE")
+			(net 22 "SCK RE")
 			(pinfunction "Pin_6")
 			(pintype "passive")
 			(uuid "4489a306-6cbf-4d6d-b304-35018fbedf01")
@@ -2188,7 +2188,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 37 "unconnected-(AOP1-NC_2-Pad1)")
+			(net 36 "unconnected-(AOP1-NC_2-Pad1)")
 			(pinfunction "NC_2")
 			(pintype "no_connect")
 			(solder_mask_margin 0.102)
@@ -2200,7 +2200,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 32 "R2")
+			(net 31 "R2")
 			(pinfunction "-IN")
 			(pintype "input")
 			(solder_mask_margin 0.102)
@@ -2212,7 +2212,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 39 "Net-(AOP1-+IN)")
+			(net 38 "Net-(AOP1-+IN)")
 			(pinfunction "+IN")
 			(pintype "input")
 			(solder_mask_margin 0.102)
@@ -2236,7 +2236,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 38 "unconnected-(AOP1-EXTCLOCKINPUT-Pad5)")
+			(net 37 "unconnected-(AOP1-EXTCLOCKINPUT-Pad5)")
 			(pinfunction "EXTCLOCKINPUT")
 			(pintype "no_connect")
 			(solder_mask_margin 0.102)
@@ -2248,7 +2248,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 34 "Net-(AOP1-OUT)")
+			(net 33 "Net-(AOP1-OUT)")
 			(pinfunction "OUT")
 			(pintype "output")
 			(solder_mask_margin 0.102)
@@ -2272,7 +2272,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 36 "unconnected-(AOP1-NC-Pad8)")
+			(net 35 "unconnected-(AOP1-NC-Pad8)")
 			(pinfunction "NC")
 			(pintype "no_connect")
 			(solder_mask_margin 0.102)
@@ -2300,7 +2300,7 @@
 		(property "Reference" "R2"
 			(at 3.81 -1.92 0)
 			(layer "F.SilkS")
-			(uuid "300e6171-681a-43ad-a2f2-6deb423139f5")
+			(uuid "0e1a8591-cc06-4d6a-9327-664bbf7f17cd")
 			(effects
 				(font
 					(size 1 1)
@@ -2311,7 +2311,7 @@
 		(property "Value" "1k"
 			(at 3.81 1.92 0)
 			(layer "F.Fab")
-			(uuid "b3369d60-f5f0-4441-bf78-33380c414006")
+			(uuid "113db0e8-0825-44c3-b4ad-224795a5516d")
 			(effects
 				(font
 					(size 1 1)
@@ -2323,7 +2323,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e660b535-9ad6-47cf-96b2-baf419477c36")
+			(uuid "3756db36-f68e-468a-aabc-8e6a61c8b6a6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2335,7 +2335,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ec3837fe-531f-4f7f-b59b-f3265dc398e5")
+			(uuid "eaf4872f-9b29-4f58-8303-c48bfadd9f48")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2437,7 +2437,7 @@
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 35 "Net-(AOP1--IN)")
+			(net 34 "Net-(AOP1--IN)")
 			(pintype "passive")
 			(uuid "9f6352db-428c-47b0-8ab8-3b345da746f5")
 		)
@@ -3224,7 +3224,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 23 "SCK RE")
+			(net 22 "SCK RE")
 			(pinfunction "CLK")
 			(pintype "output")
 			(solder_mask_margin 0.102)
@@ -3236,7 +3236,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 25 "DT")
+			(net 24 "DT")
 			(pinfunction "DT")
 			(pintype "output")
 			(solder_mask_margin 0.102)
@@ -3260,7 +3260,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 24 "SW")
+			(net 23 "SW")
 			(pinfunction "SW")
 			(pintype "output")
 			(solder_mask_margin 0.102)
@@ -3753,7 +3753,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 27 "SCL")
+			(net 26 "SCL")
 			(pinfunction "SCL")
 			(pintype "input")
 			(solder_mask_margin 0.102)
@@ -3765,7 +3765,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 28 "SDA")
+			(net 27 "SDA")
 			(pinfunction "SDA")
 			(pintype "bidirectional")
 			(solder_mask_margin 0.102)
@@ -3993,7 +3993,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 18 "Net-(Graphite_sensor1--)")
+			(net 17 "Net-(Graphite_sensor1--)")
 			(pinfunction "-")
 			(pintype "input")
 			(thermal_bridge_angle 45)
@@ -4225,7 +4225,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 19 "TXD")
+			(net 18 "TXD")
 			(pinfunction "TXD")
 			(pintype "input")
 			(thermal_bridge_angle 45)
@@ -4237,7 +4237,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 20 "RXD")
+			(net 19 "RXD")
 			(pinfunction "RXD")
 			(pintype "input")
 			(thermal_bridge_angle 45)
@@ -4614,7 +4614,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 39 "Net-(AOP1-+IN)")
+			(net 38 "Net-(AOP1-+IN)")
 			(pintype "passive")
 			(uuid "c2fdfe14-8093-4182-8140-17fb6935a6cc")
 		)
@@ -4631,6 +4631,251 @@
 			)
 		)
 	)
+	(footprint "graphite_emprunts:Servo"
+		(layer "F.Cu")
+		(uuid "51662ccf-4d48-48ce-bcf8-ae1ed893a360")
+		(at 104 50.9 90)
+		(property "Reference" "M1"
+			(at 0 2.5 90)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cc2e7d6e-de3b-46cf-a5fe-d76cae91e829")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Motor_Servo"
+			(at 0 -2.5 90)
+			(layer "F.Fab")
+			(uuid "b022a79e-bd65-4669-a718-763bffb2536f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "193e3f19-e190-45ea-9c6f-813a71c9d96f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "99ebbab7-a774-4752-b2da-7dd6ee1e5608")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "PinHeader*P2.54mm*")
+		(path "/b725c2cf-a529-4b07-b8ff-222df1dc5c0f")
+		(sheetname "/")
+		(sheetfile "kicad-pcb-force-sensor.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start 3.64 -1.5)
+			(end 3.64 1.5)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "51c322e8-60d0-4189-ae6b-53cb3e63b373")
+		)
+		(fp_line
+			(start -1.27 -1.5)
+			(end -1.27 1.5)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "747dff21-7e5b-413b-a6bb-c8a0f87680ad")
+		)
+		(fp_line
+			(start -3.64 -1.5)
+			(end 3.64 -1.5)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "765a9045-959b-45b3-bcb9-d1cd007f76ad")
+		)
+		(fp_line
+			(start 3.64 1.5)
+			(end -3.64 1.5)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "7e362377-c237-4f17-ae98-5b75e4318856")
+		)
+		(fp_line
+			(start -3.64 1.5)
+			(end -3.64 -1.5)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "7f34aca7-292a-4426-8121-1d20543f6cd3")
+		)
+		(fp_line
+			(start 3.39 -1.25)
+			(end 3.39 1.25)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "43683229-61c6-4f38-8ccf-dcb187c95142")
+		)
+		(fp_line
+			(start -3.39 -1.25)
+			(end 3.39 -1.25)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "f7f8b9b1-cb7b-4664-afec-c668f56b4e3a")
+		)
+		(fp_line
+			(start 3.39 1.25)
+			(end -3.39 1.25)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "d093f755-0fe4-4413-9a7d-4c99071d128b")
+		)
+		(fp_line
+			(start -3.39 1.25)
+			(end -3.39 -1.25)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "8a4f5332-4d8f-4da8-91ef-2241c15cdb8c")
+		)
+		(fp_text user "Vout"
+			(at -2 5 180)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "a552605f-1407-4404-95f3-0d862032ab5b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(fp_text user "GND"
+			(at 3.1 4.8 180)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "bdd8188a-75bd-429f-ba09-5480a45ee74f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(fp_text user "VCC"
+			(at 0.8 4.7 180)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "cf45cc04-0129-4051-b6d4-f31220c1d5c4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(pad "1" thru_hole oval
+			(at -2.4 0 180)
+			(size 2.54 2)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 39 "D9 PWM")
+			(pinfunction "PWM")
+			(pintype "passive")
+			(thermal_bridge_angle 45)
+			(uuid "00f66cc1-ee19-460b-b481-8b4757ca1d62")
+		)
+		(pad "2" thru_hole oval
+			(at 0 0 180)
+			(size 2.54 2)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 13 "VCC")
+			(pinfunction "+")
+			(pintype "passive")
+			(thermal_bridge_angle 45)
+			(uuid "f6eafeb9-5e3b-4dca-81b5-423dc70b623e")
+		)
+		(pad "3" thru_hole oval
+			(at 2.4 0 180)
+			(size 2.54 2)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 1 "GND")
+			(pinfunction "-")
+			(pintype "passive")
+			(thermal_bridge_angle 45)
+			(uuid "72f6e21f-ed42-4a54-ae30-08fa8523264f")
+		)
+		(embedded_fonts no)
+		(model "C:/Users/NITRO5/Documents/GitHub/2025-2026-4GPa-doctorgil-paupratt/Libraries/MODÈLES 3D/Pins/PinHeader_Male_RA_2.54mm/PinHeader_1x3_Male_RA_2.54mm.step"
+			(offset
+				(xyz -2.35 -0.3 -2.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 90 90 -0)
+			)
+		)
+		(model "C:/Users/NITRO5/Documents/GitHub/2025-2026-4GPa-doctorgil-paupratt/Libraries/MODÈLES 3D/Servo/Fitec FS90R Micro Servo.STEP"
+			(offset
+				(xyz 23.5 10.5 -17)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 90 -0)
+			)
+		)
+	)
 	(footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "62e68fa4-43bc-43e5-9d12-ab9de8a57385")
@@ -4640,7 +4885,7 @@
 		(property "Reference" "R1"
 			(at 7.62 -2.37 0)
 			(layer "F.SilkS")
-			(uuid "23636ec7-a2a0-4a67-900a-be42404459c3")
+			(uuid "c43f5e00-0809-47f2-9789-7083bf9a1566")
 			(effects
 				(font
 					(size 1 1)
@@ -4651,7 +4896,7 @@
 		(property "Value" "100k"
 			(at 7.62 2.37 0)
 			(layer "F.Fab")
-			(uuid "6c53eb6c-2827-4b7d-888e-7ac5d0c5d247")
+			(uuid "bfb0f398-461f-40e4-bad9-2fa9ba25281f")
 			(effects
 				(font
 					(size 1 1)
@@ -4663,7 +4908,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "cdbd21d3-c493-4053-957a-4f022a816628")
+			(uuid "b2072663-8d0e-4f04-8c91-245b90ebf275")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4675,7 +4920,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "43943321-bc54-41d2-a01d-c8f5691de069")
+			(uuid "5925ac2a-1f16-4f47-9f2a-849e8db91d8a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4778,7 +5023,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 39 "Net-(AOP1-+IN)")
+			(net 38 "Net-(AOP1-+IN)")
 			(pintype "passive")
 			(uuid "c5369b0f-13f3-48ba-95b1-4486794fbcb3")
 		)
@@ -4892,7 +5137,7 @@
 		(property "Reference" "R5"
 			(at 5.08 2.4 0)
 			(layer "F.SilkS")
-			(uuid "690980fa-b9ab-433f-8ee6-b126b100170a")
+			(uuid "4dc43bce-3eaf-438b-8210-f4eb0ce70386")
 			(effects
 				(font
 					(size 1 1)
@@ -4903,7 +5148,7 @@
 		(property "Value" "10k"
 			(at 5.08 2.37 0)
 			(layer "F.Fab")
-			(uuid "623d806a-7e7c-44af-b52c-3213305e0d01")
+			(uuid "98b8ac61-20a4-4313-8f4a-d4f5fddb7e62")
 			(effects
 				(font
 					(size 1 1)
@@ -4915,7 +5160,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a9898778-94ab-4878-87c0-8397c9a7455e")
+			(uuid "db8a47c1-314f-4e22-8d18-be1e7203fbef")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4927,7 +5172,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e8a44f9e-85bc-4cce-a665-c6f726777c50")
+			(uuid "e17d0ee3-bb91-431b-b036-c8df213f8060")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5030,7 +5275,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 18 "Net-(Graphite_sensor1--)")
+			(net 17 "Net-(Graphite_sensor1--)")
 			(pintype "passive")
 			(uuid "f0e40247-1ae3-45bc-9973-6aa58709fde7")
 		)
@@ -5040,7 +5285,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 39 "Net-(AOP1-+IN)")
+			(net 38 "Net-(AOP1-+IN)")
 			(pintype "passive")
 			(uuid "c82f6b1a-f26a-433b-96dc-e3021556ea7b")
 		)
@@ -5066,7 +5311,7 @@
 		(property "Reference" "R3"
 			(at 3.81 -1.92 0)
 			(layer "F.SilkS")
-			(uuid "c620ea7d-b797-42a9-a98f-433b94befc58")
+			(uuid "13da5ab0-a40e-4996-b83a-e8d650fce52f")
 			(effects
 				(font
 					(size 1 1)
@@ -5077,7 +5322,7 @@
 		(property "Value" "1k"
 			(at 3.81 1.92 0)
 			(layer "F.Fab")
-			(uuid "621cd2e6-cda5-41be-87f3-f84719b88171")
+			(uuid "2ecfe5bb-dd8e-40aa-8833-e88dd25ed572")
 			(effects
 				(font
 					(size 1 1)
@@ -5089,7 +5334,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "71897eba-eef1-457b-b045-f2e14d7875f1")
+			(uuid "73a2d631-e404-4ce7-a28d-6208027ccadf")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5101,7 +5346,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "76e983a7-8f2f-428d-a38b-cb1ac9f5298a")
+			(uuid "9a3c001b-e251-4657-ba2c-0847c1202cd4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5204,7 +5449,7 @@
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 32 "R2")
+			(net 31 "R2")
 			(pintype "passive")
 			(uuid "cb7c3b81-33c4-4cbe-9dc4-2544a31edd45")
 		)
@@ -5214,7 +5459,7 @@
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 34 "Net-(AOP1-OUT)")
+			(net 33 "Net-(AOP1-OUT)")
 			(pintype "passive")
 			(uuid "fcfd5e6f-d4ba-4c9e-9ffc-bb9a3347906e")
 		)
@@ -5887,7 +6132,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "D10 PWM{slash}SS")
+			(net 32 "D10 PWM{slash}SS")
 			(pinfunction "~CS")
 			(pintype "input")
 			(solder_mask_margin 0.102)
@@ -5899,7 +6144,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 30 "D13 PWM{slash}SCK")
+			(net 29 "D13 PWM{slash}SCK")
 			(pinfunction "SCK")
 			(pintype "input")
 			(solder_mask_margin 0.102)
@@ -5911,7 +6156,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 29 "D11 PWM{slash}MOSI")
+			(net 28 "D11 PWM{slash}MOSI")
 			(pinfunction "SI")
 			(pintype "input")
 			(solder_mask_margin 0.102)
@@ -5959,7 +6204,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 32 "R2")
+			(net 31 "R2")
 			(pinfunction "PB0")
 			(pintype "passive")
 			(solder_mask_margin 0.102)
@@ -5999,7 +6244,7 @@
 		(property "Reference" "C4"
 			(at 3.71 2.85 0)
 			(layer "F.SilkS")
-			(uuid "d1bc8543-370b-42aa-8e35-b827aa0827d9")
+			(uuid "48c6c098-c720-4c45-9cf9-5c0965453fe1")
 			(effects
 				(font
 					(size 1 1)
@@ -6010,7 +6255,7 @@
 		(property "Value" "1u"
 			(at 3.75 2.5 0)
 			(layer "F.Fab")
-			(uuid "1d7b0147-69d4-43e9-a909-40a27b7c3307")
+			(uuid "24b4f42f-b985-4d5b-ad9b-6f764a34d8b7")
 			(effects
 				(font
 					(size 1 1)
@@ -6022,7 +6267,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c09af3b1-4be8-4d1c-a21a-2ed4316628dd")
+			(uuid "92c7d2ab-8c5a-4c6b-8ee0-0c51bd094408")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6034,7 +6279,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "104aa08a-fead-4d42-88e3-0ab19721bf27")
+			(uuid "d23dce0b-6e4c-4e77-bade-e64a856bf642")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6146,7 +6391,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 34 "Net-(AOP1-OUT)")
+			(net 33 "Net-(AOP1-OUT)")
 			(pintype "passive")
 			(uuid "7be44db4-5210-4371-a210-c1674de74bdf")
 		)
@@ -6156,7 +6401,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 32 "R2")
+			(net 31 "R2")
 			(pintype "passive")
 			(uuid "427cb7d1-cc25-47d4-8d15-2397b74aa1cc")
 		)
@@ -6182,7 +6427,7 @@
 		(property "Reference" "R6"
 			(at 3.81 -1.92 0)
 			(layer "F.SilkS")
-			(uuid "3e7e6d96-5d4b-4bf4-a2d6-b771937f18b1")
+			(uuid "4838d161-4ff0-4058-87eb-0c8238f8cd0c")
 			(effects
 				(font
 					(size 1 1)
@@ -6193,7 +6438,7 @@
 		(property "Value" "1k"
 			(at 3.81 1.92 0)
 			(layer "F.Fab")
-			(uuid "bcefd1f5-b9dd-452f-b1d4-d964a4915d1e")
+			(uuid "614fa9d4-de23-4134-ae2e-9d09a5d2cf72")
 			(effects
 				(font
 					(size 1 1)
@@ -6205,7 +6450,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a52988af-f0dc-4843-8176-5a7249607870")
+			(uuid "f87a6ba1-3476-4c85-a1a4-a8e9d6cb522a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6217,7 +6462,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ba99cb36-9951-4b43-93c4-ec10c4514126")
+			(uuid "dcc15589-9f6c-42e7-b19f-4a2967e95f1a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6320,7 +6565,7 @@
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 34 "Net-(AOP1-OUT)")
+			(net 33 "Net-(AOP1-OUT)")
 			(pintype "passive")
 			(uuid "4f2a5993-5c75-404b-9dbb-8bedaedc82be")
 		)
@@ -6330,7 +6575,7 @@
 			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "ADC")
+			(net 16 "ADC")
 			(pintype "passive")
 			(uuid "4e692077-1e8d-4c9e-978a-c0f51d5f5f15")
 		)
@@ -6747,7 +6992,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "ADC")
+			(net 16 "ADC")
 			(pintype "passive")
 			(uuid "cc1d8ff7-780b-4d89-b44b-2352303a86ca")
 		)
@@ -6992,7 +7237,7 @@
 		)
 	)
 	(gr_text "RXD"
-		(at 118.23 95.5 270)
+		(at 107.5 81 0)
 		(layer "F.SilkS")
 		(uuid "714a7f87-5ca3-4829-bf36-c7608022b9c4")
 		(effects

@@ -1225,6 +1225,299 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Motor:Motor_Servo"
+			(pin_names
+				(offset 0.0254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "M1"
+				(at 8.89 1.7032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Motor_Servo"
+				(at 8.89 -0.8368 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Servo Motor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "PinHeader*P2.54mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Motor_Servo_0_1"
+				(polyline
+					(pts
+						(xy 2.413 1.778) (xy 1.905 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 1.778) (xy 2.286 1.397)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 -1.778) (xy 2.032 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 -1.778) (xy 2.286 -1.397)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.413 -1.778)
+					(mid 1.2406 0)
+					(end 2.413 1.778)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.175 0)
+					(radius 0.1778)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.175 0)
+					(radius 1.4224)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 3.556) (xy -5.08 3.556) (xy -5.08 -3.556) (xy 6.35 -3.556) (xy 6.35 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 5.969 2.794)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 4.445) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.477 3.302)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 6.35 4.445)
+					(mid 7.4487 4.2737)
+					(end 7.62 3.175)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.985 3.81)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 3.175) (xy 4.191 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Motor_Servo_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "PWM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "graphite_library:BT_HC05"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3481,7 +3774,7 @@
 		(uuid "3dcc657b-55a1-48e0-9667-e01e7b6b08b5")
 	)
 	(junction
-		(at 176.53 106.68)
+		(at 146.05 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "686f3110-d6c5-4a87-86e0-1a26e0fb0845")
@@ -3603,6 +3896,16 @@
 			(type solid)
 		)
 		(uuid "09480ba4-37da-45e3-b9fe-6beebf876349")
+	)
+	(wire
+		(pts
+			(xy 173.99 111.76) (xy 177.8 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ce1167e-e6ca-423f-91c1-5933e63c48cc")
 	)
 	(wire
 		(pts
@@ -3736,7 +4039,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 102.87) (xy 173.99 102.87)
+			(xy 139.7 110.49) (xy 143.51 110.49)
 		)
 		(stroke
 			(width 0)
@@ -3926,7 +4229,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 46.99) (xy 74.93 46.99)
+			(xy 62.23 46.99) (xy 81.28 46.99)
 		)
 		(stroke
 			(width 0)
@@ -4216,7 +4519,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 106.68) (xy 176.53 106.68)
+			(xy 151.13 114.3) (xy 146.05 114.3)
 		)
 		(stroke
 			(width 0)
@@ -4253,6 +4556,16 @@
 			(type solid)
 		)
 		(uuid "bcbc7302-8a54-4b9b-98b9-f277f1b20941")
+	)
+	(wire
+		(pts
+			(xy 173.99 109.22) (xy 177.8 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcf1df37-1a9e-4ea6-ae98-6cd5b9e8a145")
 	)
 	(wire
 		(pts
@@ -4306,7 +4619,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 115.57) (xy 176.53 121.92)
+			(xy 146.05 123.19) (xy 146.05 129.54)
 		)
 		(stroke
 			(width 0)
@@ -4326,7 +4639,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 106.68) (xy 176.53 107.95)
+			(xy 146.05 114.3) (xy 146.05 115.57)
 		)
 		(stroke
 			(width 0)
@@ -4346,7 +4659,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 100.33) (xy 173.99 102.87)
+			(xy 143.51 107.95) (xy 143.51 110.49)
 		)
 		(stroke
 			(width 0)
@@ -4363,6 +4676,16 @@
 			(type default)
 		)
 		(uuid "dad74a80-9ffa-459f-b75d-7378c8fa2dd5")
+	)
+	(wire
+		(pts
+			(xy 172.72 114.3) (xy 177.8 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de306a43-15ee-493c-b780-ee8b088e941d")
 	)
 	(wire
 		(pts
@@ -4446,7 +4769,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 100.33) (xy 176.53 106.68)
+			(xy 146.05 107.95) (xy 146.05 114.3)
 		)
 		(stroke
 			(width 0)
@@ -4496,7 +4819,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 49.53) (xy 82.55 49.53)
+			(xy 62.23 49.53) (xy 81.28 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4768,7 +5091,7 @@
 	)
 	(global_label "Flex"
 		(shape input)
-		(at 181.61 106.68 0)
+		(at 151.13 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4778,7 +5101,7 @@
 		)
 		(uuid "0596064d-ca20-4cb2-b76e-d6e21cd853c0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 188.5608 106.68 0)
+			(at 158.0808 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5294,6 +5617,28 @@
 			)
 		)
 	)
+	(global_label "D9 PWM"
+		(shape input)
+		(at 81.28 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7f6dd03a-b20f-4a24-9737-fc743d1f3543")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.9802 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RXD"
 		(shape input)
 		(at 82.55 59.69 0)
@@ -5318,7 +5663,29 @@
 	)
 	(global_label "VCC"
 		(shape input)
-		(at 170.18 102.87 180)
+		(at 173.99 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9423e892-74b1-4061-93c6-e620f6b65d6e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 167.2811 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VCC"
+		(shape input)
+		(at 139.7 110.49 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5328,7 +5695,7 @@
 		)
 		(uuid "9922f209-29c1-4132-b9c0-a5414bba6e07")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.4711 102.87 0)
+			(at 132.9911 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5470,6 +5837,28 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 172.72 114.3 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c5b1cf0d-af06-45bf-827a-db3525fe17ee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.7692 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "VCC"
 		(shape input)
 		(at 125.73 161.29 0)
@@ -5488,6 +5877,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "D9 PWM"
+		(shape input)
+		(at 173.99 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c865c2b1-6f0e-4edf-a37b-a98946256caa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.2898 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5516,7 +5927,7 @@
 	)
 	(global_label "TXD"
 		(shape input)
-		(at 82.55 49.53 0)
+		(at 81.28 49.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5526,7 +5937,7 @@
 		)
 		(uuid "da329a64-0aa9-4112-a3c6-d8420ccfd95e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.0774 49.53 0)
+			(at 87.8074 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5582,7 +5993,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 176.53 121.92 270)
+		(at 146.05 129.54 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5592,7 +6003,7 @@
 		)
 		(uuid "e93fbe36-6542-4e0e-b5ba-48bf9b11b1be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 176.53 128.8708 90)
+			(at 146.05 136.4908 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6317,7 +6728,7 @@
 	)
 	(symbol
 		(lib_id "graphite_library:Flex_Sensor")
-		(at 175.26 100.33 0)
+		(at 144.78 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6326,7 +6737,7 @@
 		(fields_autoplaced yes)
 		(uuid "18399c44-3acc-4035-8577-3f63ead4d05a")
 		(property "Reference" "Flex_sensor1"
-			(at 177.8 95.2499 0)
+			(at 147.32 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6335,7 +6746,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 177.8 97.7899 0)
+			(at 147.32 105.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6344,7 +6755,7 @@
 			)
 		)
 		(property "Footprint" "graphite_emprunts:Flex"
-			(at 175.26 100.33 0)
+			(at 144.78 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6353,7 +6764,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 175.26 100.33 0)
+			(at 144.78 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6362,7 +6773,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 175.26 100.33 0)
+			(at 144.78 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7400,6 +7811,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Motor:Motor_Servo")
+		(at 185.42 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b725c2cf-a529-4b07-b8ff-222df1dc5c0f")
+		(property "Reference" "M1"
+			(at 194.31 110.0568 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Motor_Servo"
+			(at 194.31 112.5968 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "graphite_emprunts:Servo"
+			(at 185.42 116.586 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 116.586 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
+			(at 185.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3199c2cd-82fe-4105-b5d1-c5db089c6008")
+		)
+		(pin "3"
+			(uuid "e8f4f806-d2c5-429f-b021-45ccd5934977")
+		)
+		(pin "1"
+			(uuid "b25c2245-83dd-4d91-a1d1-f5fbe91aa463")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "graphite_library:KY-040")
 		(at 127 86.36 0)
 		(unit 1)
@@ -7561,7 +8045,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 176.53 111.76 0)
+		(at 146.05 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7570,7 +8054,7 @@
 		(fields_autoplaced yes)
 		(uuid "bd588233-6f8f-440b-8ae4-172b31d1293c")
 		(property "Reference" "Rflex1"
-			(at 179.07 110.4899 0)
+			(at 148.59 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7579,7 +8063,7 @@
 			)
 		)
 		(property "Value" "23k"
-			(at 179.07 113.0299 0)
+			(at 148.59 120.6499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7588,7 +8072,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 174.752 111.76 90)
+			(at 144.272 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7597,7 +8081,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 176.53 111.76 0)
+			(at 146.05 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7606,7 +8090,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 176.53 111.76 0)
+			(at 146.05 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
