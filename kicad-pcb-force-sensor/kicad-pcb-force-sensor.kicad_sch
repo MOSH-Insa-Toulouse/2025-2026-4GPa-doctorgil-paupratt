@@ -5197,7 +5197,7 @@
 			)
 		)
 	)
-	(global_label "D10 PWM{slash}MOSI"
+	(global_label "D10 PWM{slash}SS"
 		(shape input)
 		(at 81.28 44.45 0)
 		(fields_autoplaced yes)
@@ -5209,7 +5209,7 @@
 		)
 		(uuid "168bbcce-ba97-48e9-b4c0-45b2f47da55d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 99.1164 44.45 0)
+			(at 96.9392 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
