@@ -3345,6 +3345,16 @@
 	)
 	(wire
 		(pts
+			(xy 20.32 157.48) (xy 20.32 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "003ddf2d-5cba-4dd7-8c93-cd650a60fab8")
+	)
+	(wire
+		(pts
 			(xy 25.4 160.02) (xy 30.48 160.02)
 		)
 		(stroke
@@ -3472,6 +3482,16 @@
 			(type default)
 		)
 		(uuid "1c7fc3e1-b521-49b2-adcc-e1dd5fb9b7e1")
+	)
+	(wire
+		(pts
+			(xy 25.4 157.48) (xy 25.4 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20111007-f852-4fb3-82ce-1b1522d9e5eb")
 	)
 	(wire
 		(pts
