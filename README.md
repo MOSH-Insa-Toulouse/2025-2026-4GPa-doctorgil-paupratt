@@ -33,8 +33,6 @@ Le choix d'un **capteur graphite "low-tech"** illustre ce compromis (trade-off) 
 
 ## Livrables
 
-> [!TIP]
-> Puedes añadir aquí una breve descripción de lo que contiene la carpeta de entregables.
 L'ensemble du projet comprend les éléments suivants :
 
 * **Un shield PCB** branché à une board **Arduino UNO** sur lequel nous retrouverons différents composants tels que :
@@ -50,6 +48,8 @@ L'ensemble du projet comprend les éléments suivants :
 * **Un fichier APK Android** (conçue à l'aide du site *MIT APP Inventor*) qui permet, à partir d'un smartphone Android, de gérer l'interface avec le shield Arduino UNO par le biais d'une communication Bluetooth
 * **La datasheet** du capteur graphite
 
+> [!TIP]
+> **Conseil de lecture** : Pour une compréhension optimale du projet, commencez par consulter la **Datasheet** qui résume les performances théoriques avant d'explorer les fichiers de conception KiCad.
 ---
 
 ## LTSpice
@@ -75,7 +75,7 @@ $$R_{meas} = \frac{V_{cc}}{V_{ADC}} \cdot R_1 \cdot \left(1 + \frac{R_3}{R_{pote
 Afin de valider le comportement du système, deux simulations ont été effectuées :
 1. **Analyse de l'amplification** : Vérification de la dynamique du signal de sortie.
 2. **Analyse spectrale** : Confirmation de l'atténuation des fréquences non souhaitées (réjection du 50 Hz).
-*Simulation des circuits analogiques de conditionnement du signal.*
+
 
 ## KiCad
 *Conception du PCB et schématiques du circuit.*
@@ -87,6 +87,10 @@ Afin de valider le comportement du système, deux simulations ont été effectu�
 *Algorithmes d'acquisition et de traitement de données.*
 
 ## Application Android
+
+> [!TIP]
+> **Installation rapide** : Pour tester l'application Android sans recompiler le code, vous pouvez installer directement le fichier `.apk` situé dans le dossier `/Android/Release`.
+
 *Interface utilisateur pour la visualisation des données en temps réel.*
 
 ## Datasheet
