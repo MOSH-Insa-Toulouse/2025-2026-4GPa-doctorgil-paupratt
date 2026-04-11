@@ -5,7 +5,7 @@
 ## Sommaire
 
 * [Objectif du projet](#objectif-du-projet)
-* [Philosophie du projet : Sobritété et éfficacité](#Philosophie-du-projet-:-Sobriété-et-Efficacité)
+* [Philosophie du projet : Sobriété et Efficacité](#philosophie-du-projet--sobriété-et-efficacité)
 * [Livrables](#livrables)
 * [LTSpice](#ltspice)
 * [KiCad](#kicad)
