@@ -55,8 +55,10 @@ L'ensemble du projet comprend les éléments suivants :
 ## LTSpice
 
 Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
+
 ![alt text](image.png)
 Circuit d'amplification/atténuation
+
 ![alt text](image-1.png)
 Modélisation du capteur
 
