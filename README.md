@@ -35,8 +35,44 @@ Le choix d'un **capteur graphite "low-tech"** illustre ce compromis (trade-off) 
 
 > [!TIP]
 > Puedes añadir aquí una breve descripción de lo que contiene la carpeta de entregables.
+L'ensemble du projet comprend les éléments suivants :
+
+* **Un shield PCB** branché à une board **Arduino UNO** sur lequel nous retrouverons différents composants tels que :
+    * Un capteur graphite
+    * Un circuit d'amplification transimpédance
+    * Un module Bluetooth
+    * Un encodeur rotatoire
+    * Un potentiomètre digital (*qui vient remplacer la résistance R2 du circuit d'amplification*)
+    * Un capteur de contrainte commercial
+* **Une simulation LTSpice** du circuit transimpédance
+* **Un fichier KiCad** du shield avec l'ensemble des composants cités en amont
+* **Un code Arduino** qui gère le fonctionnement et les communications des modules avec la board
+* **Un fichier APK Android** (conçue à l'aide du site *MIT APP Inventor*) qui permet, à partir d'un smartphone Android, de gérer l'interface avec le shield Arduino UNO par le biais d'une communication Bluetooth
+* **La datasheet** du capteur graphite
+
+---
 
 ## LTSpice
+
+Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
+![alt text](image.png)
+Circuit d'amplification/atténuation
+![alt text](image-1.png)
+Modélisation du capteur
+
+Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rapport signal/bruit :
+
+* **Premier étage ($R_5, C_1, R_1$)** : Filtre les bruits en courant sur le signal d'entrée induits par l'alimentation 5V (symbolisée par 'SINE' + $C_3$).
+* **Deuxième étage ($C_4, R_3$)** : Réduit spécifiquement la composante de bruit à **50 Hz** induite par le réseau électrique ambiant.
+* **Troisième étage ($R_6, C_2$)** : Placé en sortie de l'amplificateur, il atténue le bruit thermique et intrinsèque du circuit.
+
+Grâce à ce conditionnement, nous déterminons la résistance du capteur graphite par la formule suivante :
+
+$$R_{meas} = \frac{V_{cc}}{V_{ADC}} \cdot R_1 \cdot \left(1 + \frac{R_3}{R_{potentio}}\right) - R_1 - R_5$$
+
+Afin de valider le comportement du système, deux simulations ont été effectuées :
+1. **Analyse de l'amplification** : Vérification de la dynamique du signal de sortie.
+2. **Analyse spectrale** : Confirmation de l'atténuation des fréquences non souhaitées (réjection du 50 Hz).
 *Simulation des circuits analogiques de conditionnement du signal.*
 
 ## KiCad
