@@ -128,6 +128,9 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 > [!WARNING]
 > **Points de vigilance (Soudure)** : Lors de l'assemblage, une attention extrême doit être portée à la qualité des soudures. Des micro-courts-circuits ou des contacts intermittents ("soudures sèches") ont été identifiés lors de nos tests initiaux, perturbant la stabilité du signal. Un nettoyage rigoureux et une vérification systématique au multimètre sont indispensables.
 
+> [!NOTE]
+> **Évolution du projet (Servomoteur)** : Bien que prévu initialement dans la conception du shield, le servomoteur n'a finalement pas été implémenté. Ce choix s'explique par des contraintes de temps et par le fait que le banc de test s'est révélé parfaitement fonctionnel et suffisant sans le servo pour valider les mesures du capteur.
+
 ## Code Arduino
 *Algorithmes d'acquisition et de traitement de données.*
 
