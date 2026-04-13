@@ -143,3 +143,5 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 
 ## Datasheet
 *Spécifications techniques du capteur de graphite réalisé.*
+
+![alt text](image-5.png)
