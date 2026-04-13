@@ -113,7 +113,20 @@ Nous avons généré un rendu 3D du PCB pour visualiser l'encombrement final et 
 > **Ajustement des modèles 3D** : Vous remarquerez peut-être des chevauchements visuels sur le rendu. Cela s'explique par l'usage de modèles CAO (fichiers `.step`) standards dont l'encombrement diffère légèrement des composants réels soudés sur le banc de test. L'empreinte au sol (*footprint*) sur le cuivre est cependant parfaitement conforme aux composants physiques.
 
 ## Shield
-*Détails sur le shield Arduino conçu pour l'interface du capteur.*
+Une fois la conception validée, nous avons procédé à la fabrication physique du shield sur une plaque d'époxy cuivrée à l'aide de Mme. Catherine Crouzet. Le processus de prototypage rapide a suivi les étapes classiques de la photogravure :
+
+* **Insolation** : Transfert du typon (généré sous KiCad) sur la plaque photosensible via une exposition aux UV.
+
+* **Révélation** : Élimination de la résine non exposée à l'aide d'un révélateur chimique.
+
+* **Gravure** : Passage dans une solution de perchlorure de fer pour dissoudre le cuivre non protégé et révéler les pistes.
+
+Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette étape a nécessité une grande précision, notamment pour le perçage des vias et le soudage des composants traversants (THT) et CMS, en veillant scrupuleusement au respect des contraintes de température pour ne pas endommager le capteur graphite.
+
+(PHOTO)
+
+> [!WARNING]
+> **Points de vigilance (Soudure)** : Lors de l'assemblage, une attention extrême doit être portée à la qualité des soudures. Des micro-courts-circuits ou des contacts intermittents ("soudures sèches") ont été identifiés lors de nos tests initiaux, perturbant la stabilité du signal. Un nettoyage rigoureux et une vérification systématique au multimètre sont indispensables.
 
 ## Code Arduino
 *Algorithmes d'acquisition et de traitement de données.*
