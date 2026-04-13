@@ -78,7 +78,39 @@ Afin de valider le comportement du système, deux simulations ont été effectu�
 
 
 ## KiCad
-*Conception du PCB et schématiques du circuit.*
+
+### KiCad : Conception du Shield
+
+Afin de concevoir un **shield PCB** conforme au cahier des charges de l'UF **I4PMH21**, nous avons développé un prototype virtuel sous **KiCad**. Cette phase de conception a permis d'intégrer l'ensemble des contraintes électroniques, mécaniques et physiques liées aux composants utilisés.
+
+La première étape a consisté à élaborer la **saisie de schéma** (*schematic*) regroupant l'intégralité des modules :
+
+![alt text](image-2.png)
+
+
+### Routage du PCB (Layout)
+
+Une fois le schéma validé, nous avons procédé au **routage du PCB**. L'enjeu principal a été la gestion de l'intégrité du signal dans un environnement mixte (analogique/numérique) :
+
+* **Plan de masse** : Mise en place d'un plan de masse continu pour minimiser l'inductance de boucle et assurer une référence stable.
+* **Isolation** : Séparation physique des pistes à haute impédance (liées au capteur graphite) pour limiter les couplages capacitifs.
+* **Contraintes mécaniques** : Alignement des connecteurs pour un embrochage parfait sur l'Arduino UNO.
+
+Pour maintenir l'intégrité du plan de masse et respecter les contraintes d'espace, nous avons opté pour la mise en place d'un **strap externe (jumper)**. Cette solution a permis de finaliser les connexions tout en garantissant une isolation optimale entre les pistes critiques.
+
+Le design final du shield est présenté ci-dessous :
+
+![alt text](image-3.png)
+
+
+### Rendu 3D du Shield
+
+Nous avons généré un rendu 3D du PCB pour visualiser l'encombrement final et l'agencement des composants. Voici une vue de dessus du projet :
+
+![alt text](image-4.png)
+
+> [!NOTE]
+> **Ajustement des modèles 3D** : Vous remarquerez peut-être des chevauchements visuels sur le rendu. Cela s'explique par l'usage de modèles CAO (fichiers `.step`) standards dont l'encombrement diffère légèrement des composants réels soudés sur le banc de test. L'empreinte au sol (*footprint*) sur le cuivre est cependant parfaitement conforme aux composants physiques.
 
 ## Shield
 *Détails sur le shield Arduino conçu pour l'interface du capteur.*
