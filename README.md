@@ -76,7 +76,7 @@ La simulation nous a permis d'optimiser deux paramètres critiques : le filtrage
 #### 1. Optimisation du filtrage (C4 et R3)
 L'étude fréquentielle montre l'impact direct des composants sur la qualité du signal :
 * **Fréquence de coupure** : Plus $C_4$ est petit, plus la fréquence de coupure $f_c = \frac{1}{2\pi R_3 C_4}$ est élevée, ce qui réduit l'efficacité du filtrage des parasites à **50 Hz**.
-* **Gain du filtre** : La résistance $R_3$ permet d'ajuster le décalage vertical du signal pour l'adapter à la fenêtre de lecture.
+* **Gain du filtre** : La résistance $R_2$ permet d'ajuster le décalage vertical du signal pour l'adapter à la fenêtre de lecture.
 
 ![Graphique de simulation LTSpice](./Project%20images/LTSpice/Simulation.png)
 *Simulation de l'influence de C4 et R3 sur la stabilisation du signal.*
