@@ -191,6 +191,7 @@ Nous avons réalisé une application mobile à l'aide de **MIT App Inventor**.  
 * **Graphique Dynamique** : Visualisation temporelle de la résistance pour identifier la sensibilité du capteur à la déformation.
 
 ![Interface Application Android](./Project%20images/Application%20Android/Capture.jpeg)
+
 *Interface utilisateur pour la visualisation des données en temps réel.*
 
 ## Datasheet
