@@ -130,7 +130,21 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 > **Évolution du projet (Servomoteur)** : Bien que prévu initialement dans la conception du shield, le servomoteur n'a finalement pas été implémenté. Ce choix s'explique par des contraintes de temps et par le fait que le banc de test s'est révélé parfaitement fonctionnel et suffisant sans le servo pour valider les mesures du capteur.
 
 ## Code Arduino
-*Algorithmes d'acquisition et de traitement de données.*
+## Code Arduino
+
+En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](#code-arduino) permettant la communication des composants avec l'**Arduino UNO**, ainsi qu'avec le smartphone via l'application Android.
+
+### Fonctionnalités principales :
+* **Acquisition Analogique** : Lecture du signal amplifié et conversion en résistance via la formule de transfert.
+* **Pilotage du Potentiomètre Digital** : Ajustement dynamique du gain d'amplification via le bus I2C.
+* **Interface Bluetooth** : Envoi périodique des données vers l'application Android.
+* **Gestion de l'Encodeur** : Interface utilisateur physique pour naviguer dans les menus ou ajuster les seuils.
+
+> [!TIP]
+> **Structure du code** : Le code est organisé de manière non-bloquante (utilisation de `millis()` au lieu de `delay()`) pour garantir une réactivité maximale de la liaison Bluetooth et de l'encodeur.
+
+---
+
 
 ## Application Android
 
