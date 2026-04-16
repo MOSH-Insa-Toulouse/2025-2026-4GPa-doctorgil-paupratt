@@ -69,7 +69,7 @@ Grâce à ce conditionnement, nous déterminons la résistance du capteur graphi
 
 $$R_{meas} = \frac{V_{cc}}{V_{ADC}} \cdot R_1 \cdot \left(1 + \frac{R_3}{R_{potentio}}\right) - R_1 - R_5$$
 
-#### Analyse des simulations et dimensionnement
+### Analyse des simulations et dimensionnement
 
 La simulation nous a permis d'optimiser deux paramètres critiques : le filtrage du bruit secteur et la dynamique de mesure.
 
