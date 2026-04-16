@@ -105,8 +105,7 @@ En considérant l'AOP comme idéal en régime linéaire ($V_+ = V_-$) et en appl
 
     $$R_c = R_1 \cdot \frac{V_{cc}}{V_{adc}} \cdot \left(1 + \frac{R_3}{R_2}\right) - R_1 - R_5$$
 
-> [!IMPORTANT]
-> Cette équation permet au microcontrôleur de convertir en temps réel la tension lue sur la broche analogique en une valeur de résistance physique exploitable pour la datasheet.
+Cette équation permet au microcontrôleur de convertir en temps réel la tension lue sur la broche analogique en une valeur de résistance physique exploitable pour la datasheet.
 
 
 
@@ -166,9 +165,8 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 
 ## Code Arduino
 
-En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./Arduino/Code/ProjetMosh/ProjetMosh.ino) permettant la communication des composants avec l'**Arduino UNO**, ainsi qu'avec le smartphone via l'application Android.
+En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./Arduino/Code/ProjetMosh/ProjetMosh.ino) permettant la communication des composants avec l'**Arduino UNO**, voici les fonctionnalités principales :
 
-### Fonctionnalités principales :
 * **Acquisition Analogique** : Lecture haute impédance et conversion du signal en résistance.
 * **Contrôle du Gain via Encodeur** : Utilisation de l'**encodeur rotatif** pour incrémenter ou décrémenter la valeur du potentiomètre numérique. Cette interface permet à l'utilisateur de calibrer manuellement le capteur en temps réel.
 * **Gestion du Potentiomètre Digital** : Communication via le bus I2C pour mettre à jour la résistance de contre-réaction ($R_2/R_g$) dès qu'une rotation de l'encodeur est détectée.
@@ -185,8 +183,7 @@ Nous avons réalisé une application mobile à l'aide de **MIT App Inventor**.  
 
 > Le code de programmation est disponibles ici : **[Accéder au code de l'application](./Application/Code%20apk)**.
 
-### Fonctionnalités :
-* **Liaison Bluetooth** : Connexion simplifiée avec le module HC-05 (ou HC-06) présent sur le shield.
+* **Liaison Bluetooth** : Connexion simplifiée avec le module HC-05 présent sur le shield.
 * **Graphique Dynamique** : Visualisation temporelle de la résistance pour identifier la sensibilité du capteur à la déformation.
 
 ![Interface Application Android](./Project%20images/Application%20Android/Capture.jpeg)
@@ -198,7 +195,6 @@ Nous avons réalisé une application mobile à l'aide de **MIT App Inventor**.  
 
 La rédaction de la **datasheet** repose sur une série de mesures expérimentales effectuées grâce à un banc de test dédié.
 
-### Protocole de mesure
 Le banc de test, imprimé en 3D, utilise 7 demi-disques (Ø 1cm à 5cm) pour simuler des déformations contrôlées. Nous avons testé une gamme de capteurs allant du **2H au 3B** pour identifier le meilleur compromis entre conductivité initiale et sensibilité à la flexion.
 
 ![alt text](./Project%20images/image-5.png)
