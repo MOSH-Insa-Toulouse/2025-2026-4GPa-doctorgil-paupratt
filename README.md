@@ -53,6 +53,7 @@ L'ensemble du projet comprend les éléments suivants :
 
 Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
 
+
 ![alt text](./Project%20images/LTSpice/image.png)
 *Circuit d'amplification/atténuation*
 
@@ -78,6 +79,7 @@ L'étude fréquentielle montre l'impact direct des composants sur la qualité du
 * **Fréquence de coupure** : Plus $C_4$ est petit, plus la fréquence de coupure $f_c = \frac{1}{2\pi R_3 C_4}$ est élevée, ce qui réduit l'efficacité du filtrage des parasites à **50 Hz**.
 * **Gain du filtre** : La résistance $R_2$ permet d'ajuster le décalage vertical du signal pour l'adapter à la fenêtre de lecture.
 
+
 ![Graphique de simulation LTSpice](./Project%20images/LTSpice/Simulation.png)
 *Simulation de l'influence de C4 et R3 sur la stabilisation du signal.*
 
@@ -94,17 +96,18 @@ Pour extraire la valeur de la résistance du capteur $R_c$ à partir de la tensi
 
 En considérant l'AOP comme idéal en régime linéaire ($V_+ = V_-$) et en appliquant le théorème de **Millman**, nous obtenons les relations suivantes :
 
-#### 1. Expression de $V_+$ (Diviseur de tension)
-$$V_+ = \frac{R_1}{R_c + R_1 + R_5} \cdot V_{cc}$$
+- #### 1. Expression de $V_+$ (Diviseur de tension)
+    $$V_+ = \frac{R_1}{R_c + R_1 + R_5} \cdot V_{cc}$$
 
-#### 2. Expression de $V_-$ (Théorème de Millman)
-Comme l'entrée est reliée à la masse via $R_2$ :
-$$V_- = \frac{\frac{V_{out}}{R_3} + \frac{0}{R_2}}{\frac{1}{R_3} + \frac{1}{R_2}} = V_+$$
+- #### 2. Expression de $V_-$ (Théorème de Millman)
+    Comme l'entrée est reliée à la masse via $R_2$ :
 
-#### 3. Équation finale de la résistance $R_c$
-En posant $V_{out} = V_{adc}$ et en isolant $R_c$, nous arrivons à la formule de transfert utilisée dans le code Arduino :
+    $$V_- = \frac{\frac{V_{out}}{R_3} + \frac{0}{R_2}}{\frac{1}{R_3} + \frac{1}{R_2}} = V_+$$
 
-$$R_c = R_1 \cdot \frac{V_{cc}}{V_{adc}} \cdot \left(1 + \frac{R_3}{R_2}\right) - R_1 - R_5$$
+- #### 3. Équation finale de la résistance $R_c$
+    En posant $V_{out} = V_{adc}$ et en isolant $R_c$, nous arrivons à la formule de transfert utilisée dans le code Arduino :
+
+    $$R_c = R_1 \cdot \frac{V_{cc}}{V_{adc}} \cdot \left(1 + \frac{R_3}{R_2}\right) - R_1 - R_5$$
 
 > [!IMPORTANT]
 > Cette équation permet au microcontrôleur de convertir en temps réel la tension lue sur la broche analogique en une valeur de résistance physique exploitable pour la datasheet.
