@@ -132,7 +132,7 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 ## Code Arduino
 ## Code Arduino
 
-En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./Arduino/Code) permettant la communication des composants avec l'**Arduino UNO**, ainsi qu'avec le smartphone via l'application Android.
+En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./Arduino/Code/ProjetMosh/ProjetMosh.ino) permettant la communication des composants avec l'**Arduino UNO**, ainsi qu'avec le smartphone via l'application Android.
 
 ### Fonctionnalités principales :
 * **Acquisition Analogique** : Lecture du signal amplifié et conversion en résistance via la formule de transfert.
