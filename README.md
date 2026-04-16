@@ -66,10 +66,6 @@ Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rap
 * **Deuxième étage ($C_4, R_3$)** : Réduit spécifiquement la composante de bruit à **50 Hz** induite par le réseau électrique ambiant.
 * **Troisième étage ($R_6, C_2$)** : Placé en sortie de l'amplificateur, il atténue le bruit thermique et intrinsèque du circuit.
 
-Grâce à ce conditionnement, nous déterminons la résistance du capteur graphite par la formule suivante :
-
-$$R_{meas} = \frac{V_{cc}}{V_{ADC}} \cdot R_1 \cdot \left(1 + \frac{R_3}{R_{potentio}}\right) - R_1 - R_5$$
-
 ### Analyse des simulations et dimensionnement
 
 La simulation nous a permis d'optimiser deux paramètres critiques : le filtrage du bruit secteur et la dynamique de mesure.
@@ -90,21 +86,21 @@ Pour éviter la saturation de l'ADC de l'Arduino (limité à 5V), nous avons con
 * **Problématique** : La résistance des capteurs graphite varie énormément selon le dépôt. Un courant $I_{sens}$ trop élevé peut saturer l'amplificateur à 5V, rendant toute variation de pression invisible.
 * **Solution Manuelle** : L'utilisateur peut ajuster dynamiquement le gain via le **potentiomètre numérique** en utilisant l'**encodeur rotatif**. 
 * **Objectif** : L'utilisateur tourne l'encodeur pour ramener le signal au repos vers **2,5V** (valeur brute de 512 sur l'ADC). Cela place le point de fonctionnement au milieu de l'échelle de mesure, offrant une marge de manœuvre maximale pour observer les variations sans écrêtage.
-#### Modélisation mathématique du capteur
+#### 3. Modélisation mathématique du capteur
 
 Pour extraire la valeur de la résistance du capteur $R_c$ à partir de la tension mesurée $V_{adc}$, nous avons modélisé le circuit en régime statique (Basse Fréquence). 
 
 En considérant l'AOP comme idéal en régime linéaire ($V_+ = V_-$) et en appliquant le théorème de **Millman**, nous obtenons les relations suivantes :
 
-- #### 1. Expression de $V_+$ (Diviseur de tension)
+- #### Expression de $V_+$ (Diviseur de tension)
     $$V_+ = \frac{R_1}{R_c + R_1 + R_5} \cdot V_{cc}$$
 
-- #### 2. Expression de $V_-$ (Théorème de Millman)
+- #### Expression de $V_-$ (Théorème de Millman)
     Comme l'entrée est reliée à la masse via $R_2$ :
 
     $$V_- = \frac{\frac{V_{out}}{R_3} + \frac{0}{R_2}}{\frac{1}{R_3} + \frac{1}{R_2}} = V_+$$
 
-- #### 3. Équation finale de la résistance $R_c$
+- #### Équation finale de la résistance $R_c$
     En posant $V_{out} = V_{adc}$ et en isolant $R_c$, nous arrivons à la formule de transfert utilisée dans le code Arduino :
 
     $$R_c = R_1 \cdot \frac{V_{cc}}{V_{adc}} \cdot \left(1 + \frac{R_3}{R_2}\right) - R_1 - R_5$$
@@ -116,7 +112,7 @@ En considérant l'AOP comme idéal en régime linéaire ($V_+ = V_-$) et en appl
 
 ## KiCad
 
-### KiCad : Conception du Shield
+### Conception du Shield
 
 Afin de concevoir un **shield PCB** conforme au cahier des charges de l'UF **I4PMH21**, nous avons développé un prototype virtuel sous **KiCad**. Cette phase de conception a permis d'intégrer l'ensemble des contraintes électroniques, mécaniques et physiques liées aux composants utilisés.
 
@@ -185,13 +181,41 @@ En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./A
 
 
 ## Application Android
+Nous avons réalisé une application mobile à l'aide de **MIT App Inventor**.  Ce dashboard permet non seulement de lire les valeurs du capteur graphite en temps réel, mais constitue également un outil d'acquisition de données complet.
 
-> [!TIP]
-> **Installation rapide** : Pour tester l'application Android sans recompiler le code, vous pouvez installer directement le fichier `.apk` situé dans le dossier `/Android/Release`.
+> [!IMPORTANT]
+> Le code de programmation est disponibles ici : **[Accéder au code de l'application](./Application/Code%20apk)**.
 
+### Fonctionnalités :
+* **Liaison Bluetooth** : Connexion simplifiée avec le module HC-05 (ou HC-06) présent sur le shield.
+* **Graphique Dynamique** : Visualisation temporelle de la résistance pour identifier la sensibilité du capteur à la déformation.
+
+![Interface Application Android](./Project%20images/Application%20Android/Capture.jpeg)
 *Interface utilisateur pour la visualisation des données en temps réel.*
 
 ## Datasheet
-*Spécifications techniques du capteur de graphite réalisé.*
+## Caractérisation et Banc de test
+
+La rédaction de la **datasheet** repose sur une série de mesures expérimentales effectuées grâce à un banc de test dédié.
+
+### Protocole de mesure
+Le banc de test, imprimé en 3D, utilise 7 demi-disques (Ø 1cm à 5cm) pour simuler des déformations contrôlées. Nous avons testé une gamme de capteurs allant du **2H au 3B** pour identifier le meilleur compromis entre conductivité initiale et sensibilité à la flexion.
 
 ![alt text](./Project%20images/image-5.png)
+*Classification des nuances de graphite : de la mine dure (H) à la mine tendre (B).*
+
+![Shield](./Project%20images/Shield.jpeg)
+*Montage complet*
+
+
+ **Documentation technique** : Le rapport complet des performances est disponible ici : 
+> 📄 **[Consulter la Datasheet (PDF)](./Caractérisation%20et%20Datasheet/Datasheet.pdf)**
+
+> [!NOTE]
+> **Sélection des échantillons** : Certains capteurs présentant des valeurs aberrantes ou une instabilité trop marquée ont été écartés de l'analyse finale afin de garantir la cohérence des courbes de tendance.
+
+> [!WARNING]
+> **Limites expérimentales** : La reproductibilité des mesures s'est avérée délicate. Plusieurs facteurs ont influencé les résultats :
+> * **Variation de densité** du graphite lors du dépôt manuel.
+> * **Dégradation mécanique** de la couche de graphite au fil des tests.
+> * **Contacts électriques** instables en fin de série.
