@@ -69,6 +69,25 @@ Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rap
 *Atténuation d'environ 46 dB à 50 Hz. Le comportement global du circuit est bel est bien passe-bas.*
 * **Troisième étage ($R_6, C_2$)** : Placé en sortie de l'amplificateur, il atténue le bruit thermique et intrinsèque du circuit.
 
+Pour extraire la valeur de la résistance du capteur $R_c$ à partir de la tension mesurée $V_{adc}$, nous avons modélisé le circuit en régime statique (Basse Fréquence). 
+
+En considérant l'AOP comme idéal en régime linéaire ($V_+ = V_-$) et en appliquant le théorème de **Millman**, nous obtenons les relations suivantes :
+
+- #### Expression de $V_+$ (Diviseur de tension)
+    $$V_+ = \frac{R_1}{R_c + R_1 + R_5} \cdot V_{cc}$$
+
+- #### Expression de $V_-$ (Théorème de Millman)
+    Comme l'entrée est reliée à la masse via $R_2$ :
+
+    $$V_- = \frac{\frac{V_{out}}{R_3} + \frac{0}{R_2}}{\frac{1}{R_3} + \frac{1}{R_2}} = V_+$$
+
+- #### Équation finale de la résistance $R_c$
+    En posant $V_{out} = V_{adc}$ et en isolant $R_c$, nous arrivons à la formule de transfert utilisée dans le code Arduino :
+
+    $$R_c = R_1 \cdot \frac{V_{cc}}{V_{adc}} \cdot \left(1 + \frac{R_3}{R_2}\right) - R_1 - R_5$$
+
+Cette équation permet au microcontrôleur de convertir en temps réel la tension lue sur la broche analogique en une valeur de résistance physique exploitable pour la datasheet.
+
 ### Analyse des simulations et dimensionnement
 
 La simulation nous a permis d'optimiser deux paramètres critiques : le filtrage du bruit secteur et la dynamique de mesure.
@@ -89,29 +108,8 @@ Pour éviter la saturation de l'ADC de l'Arduino (limité à 5V), nous avons con
 * **Problématique** : La résistance des capteurs graphite varie énormément selon le dépôt. Un courant $I_{sens}$ trop élevé peut saturer l'amplificateur à 5V, rendant toute variation de pression invisible.
 * **Solution Manuelle** : L'utilisateur peut ajuster dynamiquement le gain via le **potentiomètre numérique** en utilisant l'**encodeur rotatif**. 
 * **Objectif** : L'utilisateur tourne l'encodeur pour ramener le signal au repos vers **2,5V** (valeur brute de 512 sur l'ADC). Cela place le point de fonctionnement au milieu de l'échelle de mesure, offrant une marge de manœuvre maximale pour observer les variations sans écrêtage.
-#### 3. Modélisation mathématique du capteur
 
-Pour extraire la valeur de la résistance du capteur $R_c$ à partir de la tension mesurée $V_{adc}$, nous avons modélisé le circuit en régime statique (Basse Fréquence). 
-
-En considérant l'AOP comme idéal en régime linéaire ($V_+ = V_-$) et en appliquant le théorème de **Millman**, nous obtenons les relations suivantes :
-
-- #### Expression de $V_+$ (Diviseur de tension)
-    $$V_+ = \frac{R_1}{R_c + R_1 + R_5} \cdot V_{cc}$$
-
-- #### Expression de $V_-$ (Théorème de Millman)
-    Comme l'entrée est reliée à la masse via $R_2$ :
-
-    $$V_- = \frac{\frac{V_{out}}{R_3} + \frac{0}{R_2}}{\frac{1}{R_3} + \frac{1}{R_2}} = V_+$$
-
-- #### Équation finale de la résistance $R_c$
-    En posant $V_{out} = V_{adc}$ et en isolant $R_c$, nous arrivons à la formule de transfert utilisée dans le code Arduino :
-
-    $$R_c = R_1 \cdot \frac{V_{cc}}{V_{adc}} \cdot \left(1 + \frac{R_3}{R_2}\right) - R_1 - R_5$$
-
-Cette équation permet au microcontrôleur de convertir en temps réel la tension lue sur la broche analogique en une valeur de résistance physique exploitable pour la datasheet.
-
-
-
+---
 ## KiCad
 
 ### Conception du Shield
