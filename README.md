@@ -20,7 +20,6 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 
 ---
 ## Philosophie du projet : Sobriété et Efficacité
-
 Face à l'urgence climatique et à la demande croissante de systèmes à faible empreinte carbone, ce projet s'inscrit dans une démarche de **sobriété technologique**. Simplifier les composants pour les rendre plus efficaces énergétiquement reste un défi majeur de l'ingénierie moderne.
 
 Si la réalisation de capteurs à haute sensibilité possède une forte valeur ajoutée, il est primordial de questionner nos besoins réels : avons-nous systématiquement besoin d'un capteur ultra-précis s'il consomme davantage ? Ou un capteur plus simple, adapté à l'usage final, est-il suffisant ?
@@ -54,7 +53,7 @@ L'ensemble du projet comprend les éléments suivants :
 
 Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
 
-![alt text](./Project%20images/LTSpice/image-1.png)
+![alt text](./Project%20images/LTSpice/image.png)
 *Circuit d'amplification/atténuation*
 
 ![alt text](./Project%20images/LTSpice/image-1.png)
