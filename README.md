@@ -183,7 +183,6 @@ En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./A
 ## Application Android
 Nous avons réalisé une application mobile à l'aide de **MIT App Inventor**.  Ce dashboard permet non seulement de lire les valeurs du capteur graphite en temps réel, mais constitue également un outil d'acquisition de données complet.
 
-> [!IMPORTANT]
 > Le code de programmation est disponibles ici : **[Accéder au code de l'application](./Application/Code%20apk)**.
 
 ### Fonctionnalités :
@@ -194,8 +193,8 @@ Nous avons réalisé une application mobile à l'aide de **MIT App Inventor**.  
 
 *Interface utilisateur pour la visualisation des données en temps réel.*
 
+---
 ## Datasheet
-## Caractérisation et Banc de test
 
 La rédaction de la **datasheet** repose sur une série de mesures expérimentales effectuées grâce à un banc de test dédié.
 
