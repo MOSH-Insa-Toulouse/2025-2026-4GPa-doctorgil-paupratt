@@ -70,9 +70,30 @@ Grâce à ce conditionnement, nous déterminons la résistance du capteur graphi
 
 $$R_{meas} = \frac{V_{cc}}{V_{ADC}} \cdot R_1 \cdot \left(1 + \frac{R_3}{R_{potentio}}\right) - R_1 - R_5$$
 
-Afin de valider le comportement du système, deux simulations ont été effectuées :
-1. **Analyse de l'amplification** : Vérification de la dynamique du signal de sortie.
-2. **Analyse spectrale** : Confirmation de l'atténuation des fréquences non souhaitées (réjection du 50 Hz).
+### Analyse des simulations et dimensionnement
+
+La simulation nous a permis d'optimiser deux paramètres critiques : le filtrage du bruit secteur et la dynamique de mesure.
+
+#### 1. Optimisation du filtrage (C4 et R3)
+L'étude fréquentielle montre l'impact direct des composants sur la qualité du signal :
+* **Fréquence de coupure** : Plus $C_4$ est petit, plus la fréquence de coupure $f_c = \frac{1}{2\pi R_3 C_4}$ est élevée, ce qui réduit l'efficacité du filtrage des parasites à **50 Hz**.
+* **Gain du filtre** : La résistance $R_3$ permet d'ajuster le décalage vertical du signal pour l'adapter à la fenêtre de lecture.
+
+![Graphique de simulation LTSpice](./images/simulation.png)
+*Légende : Simulation de l'influence de C4 et R3 sur la stabilisation du signal.*
+
+
+#### 2. Stratégie de Calibration et Plage Dynamique
+Pour éviter la saturation de l'ADC de l'Arduino (limité à 5V), nous avons conçu un système de réglage de gain flexible :
+
+* **Problématique** : La résistance des capteurs graphite varie énormément selon le dépôt. Un courant $I_{sens}$ trop élevé peut saturer l'amplificateur à 5V, rendant toute variation de pression invisible.
+* **Solution Manuelle** : L'utilisateur peut ajuster dynamiquement le gain via le **potentiomètre numérique** en utilisant l'**encodeur rotatif**. 
+* **Objectif** : L'utilisateur tourne l'encodeur pour ramener le signal au repos vers **2,5V** (valeur brute de 512 sur l'ADC). Cela place le point de fonctionnement au milieu de l'échelle de mesure, offrant une marge de manœuvre maximale pour observer les variations sans écrêtage.
+#### 3. Modélisation mathématique en Basse Fréquence (BF)
+Pour établir la fonction de transfert du capteur, nous nous plaçons en basse fréquence. Dans ces conditions, les capacités se comportent comme des **circuits ouverts**. La résistance du capteur $R_c$ est alors extraite selon la relation :
+
+$$R_{meas} = f(V_{cc}, V_{ADC}, R_1, R_5, R_g, R_3)$$
+
 
 
 ## KiCad
@@ -130,15 +151,14 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 > **Évolution du projet (Servomoteur)** : Bien que prévu initialement dans la conception du shield, le servomoteur n'a finalement pas été implémenté. Ce choix s'explique par des contraintes de temps et par le fait que le banc de test s'est révélé parfaitement fonctionnel et suffisant sans le servo pour valider les mesures du capteur.
 
 ## Code Arduino
-## Code Arduino
 
 En parallèle de la partie *KiCad*, nous avons développé le [Code Arduino](./Arduino/Code/ProjetMosh/ProjetMosh.ino) permettant la communication des composants avec l'**Arduino UNO**, ainsi qu'avec le smartphone via l'application Android.
 
 ### Fonctionnalités principales :
-* **Acquisition Analogique** : Lecture du signal amplifié et conversion en résistance via la formule de transfert.
-* **Pilotage du Potentiomètre Digital** : Ajustement dynamique du gain d'amplification via le bus I2C.
-* **Interface Bluetooth** : Envoi périodique des données vers l'application Android.
-* **Gestion de l'Encodeur** : Interface utilisateur physique pour naviguer dans les menus ou ajuster les seuils.
+* **Acquisition Analogique** : Lecture haute impédance et conversion du signal en résistance.
+* **Contrôle du Gain via Encodeur** : Utilisation de l'**encodeur rotatif** pour incrémenter ou décrémenter la valeur du potentiomètre numérique. Cette interface permet à l'utilisateur de calibrer manuellement le capteur en temps réel.
+* **Gestion du Potentiomètre Digital** : Communication via le bus I2C pour mettre à jour la résistance de contre-réaction ($R_2/R_g$) dès qu'une rotation de l'encodeur est détectée.
+* **Interface Bluetooth** : Transmission des données vers l'application Android pour un monitoring sans fil.
 
 > [!TIP]
 > **Structure du code** : Le code est organisé de manière non-bloquante (utilisation de `millis()` au lieu de `delay()`) pour garantir une réactivité maximale de la liaison Bluetooth et de l'encodeur.
