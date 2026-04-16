@@ -1,5 +1,3 @@
-# 2025-2026-4GPa-doctorgil-paupratt
-
 # 4A GP - Projet "Du capteur au banc de test" - I4PMH21
 
 ## Sommaire
@@ -56,10 +54,10 @@ L'ensemble du projet comprend les éléments suivants :
 
 Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
 
-![alt text](image.png)
+![alt text](./Project%20images/LTSpice/image-1.png)
 Circuit d'amplification/atténuation
 
-![alt text](image-1.png)
+![alt text](./Project%20images/LTSpice/image-1.png)
 Modélisation du capteur
 
 Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rapport signal/bruit :
@@ -85,7 +83,7 @@ Afin de concevoir un **shield PCB** conforme au cahier des charges de l'UF **I4P
 
 La première étape a consisté à élaborer la **saisie de schéma** (*schematic*) regroupant l'intégralité des modules :
 
-![alt text](image-2.png)
+![alt text](./Project%20images/KiCad//image-2.png)
 
 
 ### Routage du PCB (Layout)
@@ -100,14 +98,14 @@ Pour maintenir l'intégrité du plan de masse et respecter les contraintes d'esp
 
 Le design final du shield est présenté ci-dessous :
 
-![alt text](image-3.png)
+![alt text](./Project%20images/KiCad/image-3.png)
 
 
 ### Rendu 3D du Shield
 
 Nous avons généré un rendu 3D du PCB pour visualiser l'encombrement final et l'agencement des composants. Voici une vue de dessus du projet :
 
-![alt text](image-4.png)
+![alt text](./Project%20images/KiCad/image-4.png)
 
 > [!NOTE]
 > **Ajustement des modèles 3D** : Vous remarquerez peut-être des chevauchements visuels sur le rendu. Cela s'explique par l'usage de modèles CAO (fichiers `.step`) standards dont l'encombrement diffère légèrement des composants réels soudés sur le banc de test. L'empreinte au sol (*footprint*) sur le cuivre est cependant parfaitement conforme aux composants physiques.
@@ -144,4 +142,4 @@ Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette ét
 ## Datasheet
 *Spécifications techniques du capteur de graphite réalisé.*
 
-![alt text](image-5.png)
+![alt text](./Project%20images/image-5.png)
