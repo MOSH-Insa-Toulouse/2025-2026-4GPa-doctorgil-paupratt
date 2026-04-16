@@ -51,7 +51,7 @@ L'ensemble du projet comprend les éléments suivants :
 
 ## LTSpice
 
-Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
+Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice. Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
 
 
 ![alt text](./Project%20images/LTSpice/image.png)
@@ -64,6 +64,9 @@ Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rap
 
 * **Premier étage ($R_5, C_1, R_1$)** : Filtre les bruits en courant sur le signal d'entrée induits par l'alimentation 5V (symbolisée par 'SINE' + $C_3$).
 * **Deuxième étage ($C_4, R_3$)** : Réduit spécifiquement la composante de bruit à **50 Hz** induite par le réseau électrique ambiant.
+
+![alt text](./Project%20images/LTSpice/Passebas.png)
+*Atténuation d'environ 46 dB à 50 Hz. Le comportement global du circuit est bel est bien passe-bas.*
 * **Troisième étage ($R_6, C_2$)** : Placé en sortie de l'amplificateur, il atténue le bruit thermique et intrinsèque du circuit.
 
 ### Analyse des simulations et dimensionnement
