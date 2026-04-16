@@ -55,10 +55,10 @@ L'ensemble du projet comprend les éléments suivants :
 Afin de valider la faisabilité du projet et d'anticiper le comportement dynamique de notre système, nous avons simulé la chaîne de conditionnement sous LTSpice.Le défi majeur réside dans l'impédance extrêmement élevée du capteur (de l'ordre du $G\Omega$), qui génère des courants infimes, de l'ordre du nanoampère ($nA$). Pour rendre ce signal exploitable par un microcontrôleur, il est impératif de le filtrer contre les bruits parasites et de l'amplifier de manière significative. Le montage de transimpédance présenté ci-dessous remplit cette fonction critique :
 
 ![alt text](./Project%20images/LTSpice/image-1.png)
-Circuit d'amplification/atténuation
+*Circuit d'amplification/atténuation*
 
 ![alt text](./Project%20images/LTSpice/image-1.png)
-Modélisation du capteur
+*Modélisation du capteur*
 
 Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rapport signal/bruit :
 
@@ -70,7 +70,7 @@ Grâce à ce conditionnement, nous déterminons la résistance du capteur graphi
 
 $$R_{meas} = \frac{V_{cc}}{V_{ADC}} \cdot R_1 \cdot \left(1 + \frac{R_3}{R_{potentio}}\right) - R_1 - R_5$$
 
-### Analyse des simulations et dimensionnement
+#### Analyse des simulations et dimensionnement
 
 La simulation nous a permis d'optimiser deux paramètres critiques : le filtrage du bruit secteur et la dynamique de mesure.
 
@@ -80,7 +80,7 @@ L'étude fréquentielle montre l'impact direct des composants sur la qualité du
 * **Gain du filtre** : La résistance $R_3$ permet d'ajuster le décalage vertical du signal pour l'adapter à la fenêtre de lecture.
 
 ![Graphique de simulation LTSpice](./Project%20images/LTSpice/Simulation.png)
-*Légende : Simulation de l'influence de C4 et R3 sur la stabilisation du signal.*
+*Simulation de l'influence de C4 et R3 sur la stabilisation du signal.*
 
 
 #### 2. Stratégie de Calibration et Plage Dynamique
@@ -89,7 +89,7 @@ Pour éviter la saturation de l'ADC de l'Arduino (limité à 5V), nous avons con
 * **Problématique** : La résistance des capteurs graphite varie énormément selon le dépôt. Un courant $I_{sens}$ trop élevé peut saturer l'amplificateur à 5V, rendant toute variation de pression invisible.
 * **Solution Manuelle** : L'utilisateur peut ajuster dynamiquement le gain via le **potentiomètre numérique** en utilisant l'**encodeur rotatif**. 
 * **Objectif** : L'utilisateur tourne l'encodeur pour ramener le signal au repos vers **2,5V** (valeur brute de 512 sur l'ADC). Cela place le point de fonctionnement au milieu de l'échelle de mesure, offrant une marge de manœuvre maximale pour observer les variations sans écrêtage.
-### Modélisation mathématique du capteur
+#### Modélisation mathématique du capteur
 
 Pour extraire la valeur de la résistance du capteur $R_c$ à partir de la tension mesurée $V_{adc}$, nous avons modélisé le circuit en régime statique (Basse Fréquence). 
 
