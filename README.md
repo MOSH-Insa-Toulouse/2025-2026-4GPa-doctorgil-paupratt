@@ -11,6 +11,7 @@
 * [Code Arduino](#code-arduino)
 * [Application Android](#application-android)
 * [Datasheet](#datasheet)
+* [Conclusion et Bilan Critique](#conlcusion-et-bilan-critique)
 
 ---
 
@@ -216,3 +217,21 @@ Le banc de test, imprimé en 3D, utilise 7 demi-disques (Ø 1cm à 5cm) pour sim
 > * **Variation de densité** du graphite lors du dépôt manuel.
 > * **Dégradation mécanique** de la couche de graphite au fil des tests.
 > * **Contacts électriques** instables en fin de série.
+
+
+## Conclusion et Bilan Critique
+
+Ce projet constitue une preuve de concept réussie : il démontre qu’un matériau aussi rudimentaire que le graphite déposé sur papier peut être transformé en un **capteur de déformation (strain sensor)** fonctionnel grâce à une chaîne de conditionnement électronique optimisée.
+
+### Synthèse des résultats
+Nos simulations et tests physiques ont validé la réponse piézorésistive attendue : la résistance augmente en extension et diminue en compression. Le système complet (Capteur -> Shield -> Arduino -> Android) est pleinement opérationnel pour du monitoring en temps réel.
+
+Cependant, la reproductibilité demeure le principal défi technologique. L’hétérogénéité du dépôt manuel de graphite et les aléas liés au prototypage artisanal du PCB (gravure chimique, perçage et soudures) limitent la fiabilité des mesures.
+
+### Perspectives : La force du Low-Tech
+L'intérêt majeur de ce projet réside dans sa **valeur pédagogique**. Il prouve qu'un système d'instrumentation complet peut être conçu avec des ressources limitées. Plutôt que de complexifier le capteur, l'enjeu futur serait de rendre le processus de dépôt du graphite plus robuste et automatisé.
+
+**En conclusion**, ce projet nous a permis d'appréhender l'ensemble du cycle de vie d'un produit électronique, de la physique fondamentale du capteur jusqu'à l'interface utilisateur mobile.
+
+---
+[↑ Retour au sommaire](#sommaire)
