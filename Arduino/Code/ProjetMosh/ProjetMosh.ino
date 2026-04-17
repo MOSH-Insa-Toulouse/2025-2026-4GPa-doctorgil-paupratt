@@ -164,8 +164,8 @@ void loop() {
   resistance_variable = ((rAB * pos_res_variable) / maxPositions) + rWiper;
 
 if (tension_graphite > 0.01) {
-    //resistance_graphite = ((1.0 + (100000.0 / resistance_variable)) * 100000.0 * (VCC / tension_graphite) - 110000.0) / 1000000.0; //Résultat en MOHMS
-    resistance_graphite = (VCC/tension_graphite)*100000*(1+(1000/resistance_variable))-100000-10000;
+    //resistance_graphite = ((VCC/tension_graphite)*100000*(1+(1000/resistance_variable))-100000-10000)/1000000; //Résultat en MOHMS
+    resistance_graphite = ((VCC/tension_graphite)*100000*(1+(1000/resistance_variable))-100000-10000); //Résultat en OHMS
   }
 
   int valor_flex = analogRead(FLEX_SENSOR); 
