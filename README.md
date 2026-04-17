@@ -64,10 +64,10 @@ Ce montage se compose de trois filtres passe-bas distincts pour optimiser le rap
 
 * **Premier étage ($R_5, C_1, R_1$)** : Filtre les bruits en courant sur le signal d'entrée induits par l'alimentation 5V (symbolisée par 'SINE' + $C_3$).
 * **Deuxième étage ($C_4, R_3$)** : Réduit spécifiquement la composante de bruit à **50 Hz** induite par le réseau électrique ambiant.
+* **Troisième étage ($R_6, C_2$)** : Placé en sortie de l'amplificateur, il atténue le bruit thermique et intrinsèque du circuit.
 
 ![alt text](./Project%20images/LTSpice/Passebas.png)
 *Atténuation d'environ 46 dB à 50 Hz. Le comportement global du circuit est bel est bien passe-bas.*
-* **Troisième étage ($R_6, C_2$)** : Placé en sortie de l'amplificateur, il atténue le bruit thermique et intrinsèque du circuit.
 
 Pour extraire la valeur de la résistance du capteur $R_c$ à partir de la tension mesurée $V_{adc}$, nous avons modélisé le circuit en régime statique (Basse Fréquence). 
 
@@ -156,7 +156,6 @@ Une fois la conception validée, nous avons procédé à la fabrication physique
 
 Après le nettoyage de la carte, nous avons procédé à l'assemblage. Cette étape a nécessité une grande précision, notamment pour le perçage des vias et le soudage des composants traversants (THT) et CMS, en veillant scrupuleusement au respect des contraintes de température pour ne pas endommager le capteur graphite.
 
-(PHOTO)
 
 > [!WARNING]
 > **Points de vigilance (Soudure)** : Lors de l'assemblage, une attention extrême doit être portée à la qualité des soudures. Des micro-courts-circuits ou des contacts intermittents ("soudures sèches") ont été identifiés lors de nos tests initiaux, perturbant la stabilité du signal. Un nettoyage rigoureux et une vérification systématique au multimètre sont indispensables.
@@ -199,6 +198,7 @@ La rédaction de la **datasheet** repose sur une série de mesures expérimental
 Le banc de test, imprimé en 3D, utilise 7 demi-disques (Ø 1cm à 5cm) pour simuler des déformations contrôlées. Nous avons testé une gamme de capteurs allant du **2H au 3B** pour identifier le meilleur compromis entre conductivité initiale et sensibilité à la flexion.
 
 ![alt text](./Project%20images/image-5.png)
+
 *Classification des nuances de graphite : de la mine dure (H) à la mine tendre (B).*
 
 ![Shield](./Project%20images/Shield.jpeg)
