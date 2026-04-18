@@ -234,4 +234,20 @@ L'intérêt majeur de ce projet réside dans sa **valeur pédagogique**. Il prou
 **En conclusion**, ce projet nous a permis d'appréhender l'ensemble du cycle de vie d'un produit électronique, de la physique fondamentale du capteur jusqu'à l'interface utilisateur mobile.
 
 ---
+## Remerciements
+
+Nous tenons à remercier Mme. Crouzet et M. Grisolia pour leur encadrement précieux et leurs conseils techniques lors de la phase de conception et de fabrication tout au long de ce projet.
+
+
+---
+
+## Contact
+
+Si vous avez des questions concernant ce projet ou l'utilisation du shield, n'hésitez pas à nous contacter :
+
+* **Oscar GIL** : [gil-lamassou@insa-toulouse.fr](mailto:gil-lamassou@insa-toulouse.fr)
+* **Pau PRAT** : [prat-i-meler@insa-toulouse.fr](mailto:prat-i-meler@insa-toulouse.fr)
+
+---
+
 [↑ Retour au sommaire](#sommaire)
